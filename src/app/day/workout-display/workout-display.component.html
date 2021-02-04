@@ -1,0 +1,10 @@
+<div *ngIf="workout">
+    <h2>{{ workout.type }}</h2>
+    <p class="detail"><em>{{ workout.details }}</em></p>
+    <p *ngIf="isRun"> <strong>Miles: </strong> {{workout.miles}}</p>
+    <app-run-form *ngIf="isRun && showForm" (savedChanges)="onSave($event)" [workout]="workout"></app-run-form>
+    <app-non-run-form *ngIf="!isRun && showForm" (savedChanges)="onSave($event)" [workout]="workout"></app-non-run-form>
+
+    <button (click)="toggleForm()">Edit</button>
+    <button (click)="onDelete()">Delete</button>
+</div>

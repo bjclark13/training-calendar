@@ -1,0 +1,8 @@
+<section class="day-inner">
+    <h2>{{dayName}}</h2>
+    <workout-display [workout]="workout" (onEdit)="onEdit($event, i)" *ngFor="let workout of workouts; let i = index;">
+    </workout-display>
+
+    <button (click)="addRun()">Add Run</button>
+    <button (click)="addNonRun()">Add Non-Run</button>
+</section>

@@ -1,0 +1,9 @@
+<main>
+    <div *ngFor="let weekObj of weeks; let i = index;">
+        <h2>Week {{ i + 1 }}</h2>
+        <week [week]="weekObj.week"></week>
+        <button (click)="addWeek(weekObj, i)">Add Week Here</button>
+        <button (click)="deleteWeek(i)">Delete Week</button>
+
+    </div>
+</main>

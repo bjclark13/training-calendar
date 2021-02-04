@@ -1,0 +1,21 @@
+<div>
+    <div class="form-group">
+        <p><label>Distance: <input [(ngModel)]="miles" type="number" placeholder="miles" /></label></p>
+
+        <p>
+            <label> <input type="checkbox" [(ngModel)]="increaseToggle" /> Increase Miles Weekly?
+            </label>
+        </p>
+        <div *ngIf="increaseToggle">
+            <p>
+                <label> By <input type="number" [(ngModel)]="increase" placeholder="miles"> </label>
+            </p>
+            <p>
+                <label> Until <input type="number" [(ngModel)]="until" placeholder="miles"> </label>
+            </p>
+        </div>
+    </div>
+
+    <label>Details: <textarea [(ngModel)]="details"></textarea></label>
+    <button (click)="onSaveChanges()">Save</button>
+</div>

@@ -1,0 +1,22 @@
+.week {
+    display: flex;
+    width: 100%;
+    border: 1px solid #000;
+    .day {
+        border: 1px solid #000;
+        flex: 1;
+    }
+
+    .total-miles {
+        text-align: center;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        background-color: #e0e0e0;
+        p {
+            font-size: 2rem;
+        }
+        padding: 1rem;
+    }
+}

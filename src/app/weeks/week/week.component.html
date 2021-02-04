@@ -1,0 +1,7 @@
+<section class="week">
+    <div class="day total-miles">
+        <h2>Total Miles</h2>
+        <p>{{ getTotalMiles() }}</p>
+    </div>
+    <day [dayIndex]="i" [workouts]="workouts" class="day" *ngFor="let workouts of week; let i = index"></day>
+</section>

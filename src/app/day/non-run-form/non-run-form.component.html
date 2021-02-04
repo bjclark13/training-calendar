@@ -1,0 +1,10 @@
+<div>
+    <div class="form-group">
+        <select [(ngModel)]="type">
+            <option *ngFor="let type of workoutTypes" [value]="type">{{type}}</option> 
+        </select>
+    </div>
+
+    <label>Details: <textarea [(ngModel)]="details"></textarea></label>
+    <button (click)="onSaveChanges()">Save</button>
+</div>
